@@ -1,0 +1,5 @@
+{
+  "name": "Visual Prompt Studio",
+  "description": "An advanced AI-powered studio for crafting professional Midjourney and Stable Diffusion prompts using a structured visual workflow and Gemini 3 Pro.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Prompt Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              studio: {
+                900: '#0a0a0f',
+                800: '#13131f',
+                700: '#1c1c2e',
+                600: '#2a2a45',
+                500: '#3f3f6e',
+                400: '#5e5ea8',
+                300: '#8282d6',
+                accent: '#00d2ff',
+                glow: '#00d2ff20'
+              }
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+              sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for a sleeker look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0f; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2a2a45; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3f3f6e; 
+      }
+      
+      .markdown-body p {
+        margin-bottom: 0.75em;
+      }
+      .markdown-body ul {
+        list-style-type: disc;
+        padding-left: 1.5em;
+        margin-bottom: 0.75em;
+      }
+      .markdown-body ol {
+        list-style-type: decimal;
+        padding-left: 1.5em;
+        margin-bottom: 0.75em;
+      }
+      .markdown-body code {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      .markdown-body pre {
+        background-color: #050508;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-bottom: 1em;
+        border: 1px solid #2a2a45;
+      }
+      .markdown-body pre code {
+        background-color: transparent;
+        padding: 0;
+      }
+      
+      /* Table Styling */
+      .markdown-body table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        margin-bottom: 1em;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #2a2a45;
+        font-size: 0.9em;
+      }
+      .markdown-body th, .markdown-body td {
+        padding: 0.75em 1em;
+        text-align: left;
+        border-bottom: 1px solid #2a2a45;
+      }
+      .markdown-body th {
+        background-color: #1c1c2e;
+        font-weight: 600;
+        color: #fff;
+        border-right: 1px solid #2a2a45;
+      }
+      .markdown-body th:last-child {
+        border-right: none;
+      }
+      .markdown-body td {
+        background-color: rgba(19, 19, 31, 0.5);
+        border-right: 1px solid #2a2a45;
+        vertical-align: top;
+      }
+      .markdown-body td:last-child {
+        border-right: none;
+      }
+      .markdown-body tr:last-child td {
+        border-bottom: none;
+      }
+      .markdown-body strong {
+        font-weight: 700;
+        color: #fff;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "remark-gfm": "https://aistudiocdn.com/remark-gfm@^4.0.0",
+    "rehype-raw": "https://aistudiocdn.com/rehype-raw@^7.0.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-studio-900 text-gray-100 h-screen overflow-hidden selection:bg-studio-accent selection:text-studio-900">
+    <div id="root"></div>
+  </body>
+</html>
